@@ -18,7 +18,7 @@ var userNum = parseInt(prompt("Scegli un numero da 1 a 5"))
 //impedisco un input errato
 while ((userNum >= parseInt(6)) || (userNum <= parseInt(-1))) {
     var userNum = parseInt(prompt("Scegli un numero da 1 a 5"));
-    ((userNum <= 5) || (userNum >= 0))
+    ((userNum <= 5) && (userNum >= 0))
 }
     console.log("l'utente ha scelto " + userNum)
 
