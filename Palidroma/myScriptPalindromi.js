@@ -8,32 +8,43 @@ while (!isNaN(parola)) {
     isNaN(parola)
   }
 
-var pal
-//inverto la parola inserita
-var parolaInvertita = parola.split("").reverse().join("");
+//funzione per invertire gli input utente
+function reverse(input){
+inputInvertito = input.split("").reverse().join("");
+return inputInvertito
+}
+var parolaInvertita;
+var parolaInvertita = reverse(parola);
+
+/*
 
 //alternativa vista in classe
-/*
+
     for (var i = parola.length -1; i >= 0; i--){
     parolaInvertita += parola[i]
     }
 */
 
 
-if (parola === parolaInvertita) {
-    pal = true
-    document.write("La parola è palindroma");
-}else{
-    pal = false
-    document.write("La parola non è palindroma");
+function compare(input, tupni){
+    if (input === tupni) {
+        document.write("La parola è palindroma");
+        return true
+    }else{
+        document.write("La parola non è palindroma");
+        return false
+        
+    }
 }
 
+var palindromo
+var palindromo = compare(parola, parolaInvertita);
 
 console.log(parola)
 
 console.log(parolaInvertita)
 
-console.log(pal)
+console.log(palindromo)
 
 
 
